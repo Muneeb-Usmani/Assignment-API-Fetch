@@ -13,10 +13,10 @@ async function Fetch() {
       <div className="flex flex-wrap justify-center gap-3 mt-3">
         {res.map((data: any, index: number) => {
           return (
-            <Link href={`/${data.id}`}>
+            <Link key={index} href={`/${data.id}`}>
               <div
                 className=" w-80 p-6 bg-white border border-gray-200 rounded-lg shadow flex flex-col items-center hover:bg-gray-200"
-                key={index}
+                
               >
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">
                   {data.name}
